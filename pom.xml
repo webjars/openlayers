@@ -68,7 +68,7 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>SOME_FILE-${angularui.version}.zip</fromFile>
+                            <fromFile>SOME_FILE-${upstream.version}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
@@ -88,7 +88,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/SOME_SUBDIR-${angularui.version}" />
+                                    <fileset dir="${project.build.directory}/SOME_SUBDIR-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
