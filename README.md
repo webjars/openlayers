@@ -1,5 +1,5 @@
-WebJar for [Library]
+WebJar for CanJS
 
 More info: http://webjars.org
 
-Upstream: [Library URL]
+Upstream: http://canjs.us/
