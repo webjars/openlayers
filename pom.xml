@@ -10,39 +10,47 @@
     
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
-    <artifactId>canjs</artifactId>
-    <version>1.1.3-SNAPSHOT</version>
-    <name>CanJS</name>
-    <description>WebJar for CanJS</description>
+    <artifactId>WEBJAR_ID</artifactId>
+    <version>UPSTREAM_VERSION-SNAPSHOT</version>
+    <name>WEBJAR_NAME</name>
+    <description>WebJar for WEBJAR_NAME</description>
     <url>http://webjars.org</url>
 
     <developers>
         <developer>
-            <id>jamesward</id>
-            <name>James Ward</name>
-            <email>james@jamesward.org</email>
+            <id>YOUR_ID</id>
+            <name>YOUR_NAME</name>
+            <email>YOUR_EMAIL</email>
         </developer>
     </developers>
 
     <licenses>
         <license>
-            <name>MIT</name>
-            <url>https://github.com/bitovi/canjs/blob/master/license.md</url>
+            <name>UPSTREAM_LICENSE_NAME</name>
+            <url>UPSTREAM_LICENSE_VERSION</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>http://github.com/webjars/canjs</url>
-        <connection>scm:git:https://github.com/webjars/canjs.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/canjs.git</developerConnection>
+        <url>http://github.com/webjars/WEBJAR_ID</url>
+        <connection>scm:git:https://github.com/webjars/WEBJAR_ID.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/WEBJAR_ID.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>ANOTHER_WEBJAR_ID</artifactId>
+            <version>ANOTHER_WEBJAR_VERSION</version>
+        </dependency>
+    </dependencies>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.1.3</upstream.version>
-        <upstream.url>https://github.com/downloads/bitovi/canjs</upstream.url>
+        <upstream.version>UPSTREAM_VERSION</upstream.version>
+        <upstream.url>UPSTREAM_URL</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
 
@@ -60,7 +68,7 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>can.js.${upstream.version}.zip</fromFile>
+                            <fromFile>SOME_FILE-${upstream.version}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
@@ -80,7 +88,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${upstream.version}" />
+                                    <fileset dir="${project.build.directory}/SOME_SUBDIR-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
