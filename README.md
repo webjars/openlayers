@@ -1,5 +1,5 @@
-WebJar for [Library]
+WebJar for OpenLayers
 
 More info: http://webjars.org
 
-Upstream: [Library URL]
+Upstream: http://www.openlayers.org/
