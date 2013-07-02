@@ -41,7 +41,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>2.12</upstream.version>
+        <upstream.version>2.13</upstream.version>
         <upstream.url>http://www.openlayers.org/download</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
