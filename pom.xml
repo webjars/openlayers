@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openlayers</artifactId>
-    <version>3.5.1-SNAPSHOT</version>
+    <version>3.7.0-SNAPSHOT</version>
     <name>OpenLayers</name>
     <description>WebJar for OpenLayers</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>3.5.0</upstream.version>
+        <upstream.version>3.7.0</upstream.version>
         <upstream.url>https://github.com/openlayers/ol3/releases/download/v${upstream.version}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
