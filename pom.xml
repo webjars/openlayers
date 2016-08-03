@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openlayers</artifactId>
-    <version>3.16.1-SNAPSHOT</version>
+    <version>3.17.1-SNAPSHOT</version>
     <name>OpenLayers</name>
     <description>WebJar for OpenLayers</description>
     <url>http://webjars.org</url>
@@ -41,8 +41,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>3.16.0</upstream.version>
-        <upstream.url>https://github.com/openlayers/ol3/releases/download/v${upstream.version}</upstream.url>
+        <upstream.url>https://github.com/openlayers/ol3/releases/download/v${version.unsnapshot}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
@@ -56,6 +55,20 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.jamesward</groupId>
+                <artifactId>unsnapshot-maven-plugin</artifactId>
+                <version>0.1</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>unsnapshot</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
                 <version>1.0-beta-4</version>
@@ -67,7 +80,7 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>v${upstream.version}.zip</fromFile>
+                            <fromFile>v${version.unsnapshot}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
@@ -87,8 +100,8 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/v${upstream.version}/build" />
-                                    <fileset dir="${project.build.directory}/v${upstream.version}/css" />
+                                    <fileset dir="${project.build.directory}/v${version.unsnapshot}/build" />
+                                    <fileset dir="${project.build.directory}/v${version.unsnapshot}/css" />
                                 </move>
                             </target>
                         </configuration>
