@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openlayers</artifactId>
-    <version>3.20.0</version>
+    <version>3.20.1-SNAPSHOT</version>
     <name>OpenLayers</name>
     <description>WebJar for OpenLayers</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/openlayers</url>
         <connection>scm:git:https://github.com/webjars/openlayers.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/openlayers.git</developerConnection>
-        <tag>openlayers-3.20.0</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <properties>
