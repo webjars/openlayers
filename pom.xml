@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openlayers</artifactId>
-    <version>8.2.0</version>
+    <version>8.2.1-SNAPSHOT</version>
     <name>OpenLayers</name>
     <description>WebJar for OpenLayers</description>
     <url>http://webjars.org</url>
@@ -36,12 +36,12 @@
         <url>http://github.com/webjars/openlayers</url>
         <connection>scm:git:https://github.com/webjars/openlayers.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/openlayers.git</developerConnection>
-        <tag>openlayers-8.2.0</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.outputTimestamp>1702574366</project.build.outputTimestamp>
+        <project.build.outputTimestamp>1702574374</project.build.outputTimestamp>
         <upstream.url>https://github.com/openlayers/openlayers/releases/download/v${version.unsnapshot}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
